@@ -40,8 +40,7 @@ unsigned int faStr2(const char *str) {
                 if (!isupper(str[i])) {
                     hasIllegalSymbols = true;
                 }
-            }
-            else if (!islower(str[i])) {
+            } else if (!islower(str[i])) {
                 hasIllegalSymbols = true;
             }
         }
@@ -70,8 +69,7 @@ unsigned int faStr3(const char *str) {
         if (inWord) {
             if (str[i] != ' ') {
                 symbols++;
-            }
-            else {
+            } else {
                 inWord = false;
                 words++;
             }
@@ -83,6 +81,6 @@ unsigned int faStr3(const char *str) {
     if (words == 0) {
         return 0;
     }
-    double average = (double) symbols / words;
-    return (unsigned int) round(average);
+    double symbolsAverage = static_cast<double>(symbols) / words;
+    return static_cast<unsigned int>(round(symbolsAverage));
 }

@@ -3,7 +3,7 @@
 #include "fun.h"
 
 int main() {
-    char *str = (char*) "  Ab9cd   Abcd abc  AB";
+    char *str = const_cast<char*>("  Ab9cd   Abcd abc  AB");
     std::cout << faStr1(str) << std::endl;
     std::cout << faStr2(str) << std::endl;
     std::cout << faStr3(str) << std::endl;
